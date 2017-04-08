@@ -46,12 +46,6 @@
         <!-- runtime dependencies -->
         <dependency>
             <groupId>org.jetbrains.ktor</groupId>
-            <artifactId>ktor-jetty</artifactId>
-            <version>${ktor.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.ktor</groupId>
             <artifactId>ktor-netty</artifactId>
             <version>${ktor.version}</version>
             <scope>runtime</scope>
@@ -112,21 +106,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>exec-netty</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>exec-maven-plugin</artifactId>
-                        <configuration>
-                            <mainClass>org.jetbrains.ktor.netty.DevelopmentHost</mainClass>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>
